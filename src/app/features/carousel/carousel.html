@@ -1,0 +1,34 @@
+@if (isMobile()) {
+  <div class="carousel-container">
+    <div class="carousel-wrapper" [style.transform]="'translateX(-' + currentIndex() * 75 + '%)'">
+      @for ( item of items(); track item) {
+        <div class="carousel-item">
+          <!-- Aquí puedes insertar tu propio contenido -->
+            <div class="card" [style.background]="item.img">
+              <div class="overlay">
+                <h3>{{item.title}}</h3>
+                <vw-button icon="calendar_today" variant="secondary" class="btn"> Agendar </vw-button>
+              </div>
+            </div>
+        </div>
+      }
+    </div>
+
+    <div class="carousel-controls">
+      <button (click)="prev()">‹</button>
+      <button (click)="next()">›</button>
+    </div>
+  </div>
+}@else {
+  <div class="services-carousel">
+    @for ( item of items(); track item) {
+      <div class="card" [style.background]="item.img">
+        <div class="overlay">
+          <h3>{{item.title}}</h3>
+          <vw-button icon="calendar_today" variant="secondary" class="btn" (click)="openModal()"> Agendar </vw-button>
+        </div>
+      </div>
+    }
+
+  </div>
+}

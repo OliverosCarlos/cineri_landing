@@ -1,0 +1,59 @@
+@media (max-width: 800px) {
+  section{
+    margin: 0px;
+    border-radius: 0px;
+  }
+  .service-section-big-picture{
+    flex-direction: column;
+    border-radius: 20px 20px 20px 20px;
+    height: 100%;
+
+    .service-image{
+      border-radius: 20px 20px 50px 50px;
+
+      img{
+        border-radius: 0px 0px 20px 20px;
+      }
+    }
+
+    .service-content{
+      padding: 20px;
+    }
+  }
+
+  .responsive-grid{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .psychotherapy-services{
+    padding-block: 0px;
+    padding-inline: 0px;
+
+    .grid-item {
+      padding: 0px;
+
+      .grid-item-head{
+        .div-img-aux{
+          padding: 0px;
+          padding-right: 10px;
+        }
+
+        img{
+          margin: 0px;
+          border-radius: 8px;
+          width: 2rem;
+        }
+
+        .title{
+          padding: 5px;
+        }
+      }
+    }
+
+    .span-c{
+      font-size: 0.8rem;
+    }
+  }
+
+}

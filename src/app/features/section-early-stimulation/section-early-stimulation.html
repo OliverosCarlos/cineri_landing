@@ -1,0 +1,28 @@
+<section class="service-section-early-stimulation">
+  <div class="main-benefits">
+    <div class="service-content">
+      <h2>Principales beneficios de la Estimulación Temprana.</h2>
+
+      <ul class="benefits-list">
+        <li><span class="m3-icon material-symbols-outlined">psychiatry</span> <strong>Desarrollo integral desde los primeros años</strong></li>
+        <li><span class="m3-icon material-symbols-outlined">neurology</span> <strong>Fortalece la conexión neuronal</strong></li>
+        <li><span class="m3-icon material-symbols-outlined">handshake</span> <strong>Mejora la interacción social y emocional</strong></li>
+        <li><span class="m3-icon material-symbols-outlined">extension</span> <strong>Detecta y previene posibles retrasos</strong></li>
+        <li><span class="m3-icon material-symbols-outlined">family_home</span> <strong>Refuerza el vínculo afectivo con los padres</strong></li>
+      </ul>
+
+      <vw-button icon="calendar_today" variant="secondary" (click)="openModal()"> Agendar </vw-button>
+
+    </div>
+    <div class="service-image">
+      <img src="assets/girl-early-stimulation.jpg" alt="Neuropsicología" />
+    </div>
+
+  </div>
+  <div class="services-section-header">
+    <h2>Nuestros Servicios</h2>
+    <p>Ofrecemos una gama completa de servicios diseñados para estimular las habilidades de tu pequeño.</p>
+  </div>
+  <app-carousel [data]="items()"></app-carousel>
+
+</section>

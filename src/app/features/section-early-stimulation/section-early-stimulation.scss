@@ -1,0 +1,97 @@
+.service-section-early-stimulation{
+  display: flex;
+  flex-direction: column;
+  background-color: #e9f0f2;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+    url('/assets/white-logo.png') no-repeat left 20px bottom 20px;
+  // background-size: 70svh auto;
+  margin: 40px;
+  border-radius: 0px;
+
+  .main-benefits{
+    display: flex;
+    padding: 20px;
+    overflow: hidden;
+    // height: 70svh;
+  }
+
+  .service-image {
+    flex: 1;
+    padding: 20px;
+    display: flex;              /* Usamos Flexbox */
+    justify-content: center;   /* Centrado horizontal */
+    align-items: center;       /* Centrado vertical */
+  }
+
+  .service-image img {
+    max-width: 100%;           /* Evita que se desborde horizontalmente */
+    max-height: 100%;          /* Evita que se desborde verticalmente */
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  }
+
+
+
+  .service-content {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+
+
+    .benefits-list {
+      list-style: none;
+      padding: 0;
+      margin-block: 2rem;
+    }
+
+    .benefits-list li {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .benefits-list .m3-icon {
+      color: #37d7e4; /* Verde terapéutico */
+      font-size: 2rem;
+    }
+    vw-button{
+      margin: 0 auto;
+    }
+  }
+
+  .service-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #07355b;
+  }
+
+  .service-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #195f99;
+  }
+}
+
+  .services-section-header {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    h2 {
+      font-size: 2.5rem;
+      color: #07355b;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #195f99;
+    }
+  }

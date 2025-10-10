@@ -1,0 +1,48 @@
+@media (max-width: 800px) {
+
+  .service-section-early-stimulation{
+    width: 100%;
+    margin: 0px;
+
+    .main-benefits{
+      flex-direction: column;
+    }
+
+    .service-content{
+      padding: 0px;
+
+      h2{ }
+      p{ font-size: 0.8rem; color: aquamarine;}
+
+      .benefits-list{
+        margin-block: 0px;
+        strong{
+          font-size: 1rem;
+        }
+
+        .m3-icon{
+          font-size: 1.5rem;
+        }
+      }
+
+    }
+
+    .services-carousel{
+      padding:  0px;
+      flex-direction: column;
+    }
+  }
+
+  .services-section-header{
+    padding-inline: 15px;
+    p{
+      font-weight: bold;
+    }
+  }
+
+}
+
+/* Ocultar en desktop */
+@media (min-width: 801px) {
+
+}

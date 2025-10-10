@@ -1,0 +1,51 @@
+
+
+
+@media (max-width: 800px) {
+  .services-section{
+    width: 100%;
+    background-size: 50svh auto;
+
+    .services-section-header{
+    }
+
+    .services-section-body{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding-inline: 20px;
+      box-sizing: border-box;
+      padding-block: 1rem;
+
+      .services-card{
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+
+        .card-footer{
+          text-align: end;
+        }
+
+      }
+
+      .services-card {
+        opacity: 0;
+        transform: translateX(-60px);
+        transition: opacity .5s ease-out, transform .5s ease-out;
+
+        &.visible {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+
+}
+
+/* Ocultar en desktop */
+@media (min-width: 801px) {
+
+}
+

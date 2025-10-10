@@ -1,0 +1,40 @@
+<section>
+  <div class="service-image">
+    <div class="img-container cnt-1">
+      <img src="assets/adultos-rehabilitacion.jpg" alt="Neuropsicología" />
+      <h2>Rehabilitacion neuropsicológica</h2>
+    </div>
+    <div class="img-container cnt-2">
+      <h2>Mantenimiento cognitivo</h2>
+      <img src="assets/cerebro-maceta.jpg" alt="Neuropsicología" />
+    </div>
+  </div>
+  <div class="service-content">
+    <div class="card-in">
+      <div class="icon-text-container">
+        <div class="icon">
+          <img src="assets/brain-tools.png" alt="Neuropsicología" />
+        </div>
+        <div class="text">
+          <h2>Estimulación Cognitiva</h2>
+          <p>Descubre herramientas para ejercitar tu cerebro y habilidades.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-out">
+      <div class="card">
+        <div class="card-header">
+          <h2>Neuropsicología aplicada a tu bienestar</h2>
+        </div>
+        <div class="card-body">
+          <p>Contamos con programas personalizados para niños, adolescentes y adultos.</p>
+        </div>
+        <div class="card-footer">
+          <vw-button icon="calendar_today" variant="primary" (click)="openModal()"> Agendar </vw-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-carousel [data]="items()"></app-carousel>

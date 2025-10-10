@@ -1,0 +1,92 @@
+.mobile-toolbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #25a4daec;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 20px 20px 0px 0px;
+  border: solid white;
+  .menu-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    // padding: 0.5rem;
+    border-radius: 6px;
+  }
+
+  .menu-item .m3-icon {
+    font-size: 2rem;
+    // margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+  }
+}
+
+.mobile-toolbar.visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-toolbar.hidden {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+@media (max-width: 800px) {
+
+  .banner{
+    height: 70vh;
+    .overlay{
+      padding: 0px;
+    }
+    .logo{
+      font-size: 1rem;
+      img{
+        height: 3rem !important;
+      }
+    }
+
+    .content{
+      text-align: center;
+      width: 100%;
+
+      .text{
+        max-width: 100%;
+        h1 {
+          font-size: 2rem !important;
+        }
+        p{
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+      }
+
+    }
+  }
+
+}
+
+/* Ocultar en desktop */
+@media (min-width: 801px) {
+
+
+
+  .mobile-toolbar {
+    display: none;
+  }
+}
+

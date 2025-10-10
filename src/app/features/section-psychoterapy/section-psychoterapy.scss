@@ -1,0 +1,145 @@
+$background-section: #25A4DA;
+$border-color-card: #b7f0f4;
+$font-color-card: #fff;
+
+
+section{
+  margin: 0px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  background-color: $background-section;
+  border-radius: 20px;
+}
+
+.service-section-big-picture {
+  display: flex;
+  margin: 0px;
+  border-radius: 20px 20px 0px 0px;
+  height: 40svh;
+
+  .service-image {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    border-radius: 20px 50px 50px 20px;
+  }
+
+  .service-image img {
+    width: 100%;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border-radius: 20px 0px 50px 0px;
+  }
+
+  .service-content {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .service-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #b7f0f4;
+  }
+
+  .service-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+
+  .card-footer{
+    display: flex;
+    justify-content: end;
+  }
+
+}
+
+.psychotherapy-services{
+  padding-block: 20px;
+  padding-inline: 10%;
+}
+
+/* grid.component.scss */
+.responsive-grid {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+
+  // Vista de escritorio: 2 filas x 3 columnas
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+
+}
+
+.grid-item {
+  padding: 1rem;
+  // box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  color: $font-color-card;
+
+  .grid-item-head{
+    display: flex;
+
+    .img-c{
+      background-color: $border-color-card;
+      .div-img-aux{
+        background-color: $background-section;
+        border-radius: 0px 0px 20px 0px;
+        padding: 10px;
+      }
+    }
+      img{
+        margin: 0px;
+        border-radius: 8px;
+        width: 4rem;
+        background-color: $background-section;
+
+      }
+
+    .title{
+      flex: 1px;
+      background-color: $border-color-card;
+      padding: 5px;
+      border-radius: 20px 20px 0px 0px;
+      .span-c{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+      }
+
+    }
+    span{
+      flex: 1;
+    }
+  }
+  .grid-item-body{
+    border-radius: 20px 0px 20px 20px;
+    padding: 5px;
+    background-color: $border-color-card;
+    text-align: center;
+
+    .span-c{
+      border-radius: 20px;
+      padding: 10px;
+    }
+  }
+
+  .span-c{
+    background-color: $background-section;
+    // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+
+  span{
+    font-weight: bold;
+  }
+}

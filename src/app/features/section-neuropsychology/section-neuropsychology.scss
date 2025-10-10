@@ -1,0 +1,114 @@
+section{
+  display: flex;
+
+
+  .service-image{
+    display: flex;
+    width: 50%;
+    gap: 40px;
+    text-align: center;
+    padding: 40px;
+    border-radius: 0px 0px 100px 0px;
+    background: #1F8BB8;
+
+    .img-container{
+      display: flex;
+      flex-direction: column;
+
+      h2{
+        padding: 40px;
+        color: white;
+      }
+    }
+
+
+    img{
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    div:nth-of-type(1) img{ border-radius: 0px 20px 20px 20px; }
+    div:nth-of-type(2) img{ border-radius: 20px 20px 100px 10px; }
+  }
+
+  .service-content{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    .card-in{
+      background: #1F8BB8;
+      flex: 1;
+      border-radius: 0px 5px 40px 0px;
+      padding-inline: 40px;
+      height: 50%;
+
+      color: white;
+      align-content: center;
+        // text-align: center;
+
+      .icon-text-container{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        .icon{
+          z-index: 100;
+          width: 30%;
+          height: 40%;
+          text-align: end;
+          align-content: center;
+          padding-right: 2%;
+          img{
+            border: solid 4px #1F8BB8;
+            border-radius: 20px;
+            max-width: 50%;
+            max-height: 90%;
+            background-color: #27AAE2;
+            padding: 10px;
+          }
+        }
+        .text{
+          width: 70%;
+
+          h2{
+            // background-color: #41BDC6;
+            border: solid 4px #27AAE2;
+            display: inline-block;
+            margin: 0px 0px 5px 0px;
+            margin-left: -46%;
+            padding: 10px 20px 10px 46%;
+            border-radius: 20px 20px 20px 20px;
+          }
+          p{
+            margin: 0px;
+            background-color: #27AAE2;
+            margin-left: -40%;
+            padding: 10px 10px 10px 40%;
+            border-radius: 0px 5px 20px 20px;
+          }
+        }
+      }
+    }
+
+    .card-out{
+      background: #1F8BB8;
+      height: 50%;
+
+      .card{
+        background-color: #d5dde0;
+        border-radius: 40px 0px 0px 0px;
+        height: 100%;
+        padding-inline: 80px;
+        align-content: center;
+        text-align: center;
+        h2{
+          color: #0E3E52;
+        }
+        p{
+          color: #145774;
+        }
+      }
+    }
+  }
+}

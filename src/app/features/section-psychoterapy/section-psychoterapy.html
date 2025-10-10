@@ -1,0 +1,41 @@
+<section >
+  <div class="service-section-big-picture">
+    <div class="service-image">
+      <img src="assets/psicoterapia2.jpg" alt="Neuropsicología" />
+    </div>
+    <div class="service-content">
+      <div class="card-header">
+        <h2>Psicoterapia Personalizada</h2>
+      </div>
+      <div class="card-body">
+        <p>Descubre un espacio seguro para explorar tus emociones, fortalecer tu bienestar mental y avanzar hacia una vida más equilibrada.</p>
+      </div>
+      <div class="card-footer">
+        <vw-button icon="calendar_today" variant="primary" (click)="openModal()"> Agendar </vw-button>
+      </div>
+    </div>
+  </div>
+  <div class="psychotherapy-services">
+    <div class="responsive-grid">
+      @for (item of items(); track item) {
+        <div class="grid-item">
+          <div class="grid-item-head">
+            <div class="img-c">
+              <div class="div-img-aux">
+                <img [src]="'assets/'+item.icon" alt="" srcset="">
+              </div>
+            </div>
+            <div class="title">
+              <div class="span-c"><span>{{item.title}}</span></div>
+            </div>
+          </div>
+          <div class="grid-item-body">
+            <div class="span-c">
+              <span>{{item.description}}</span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
