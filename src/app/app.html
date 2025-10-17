@@ -1,57 +1,6 @@
-<section class="banner">
-  <div class="overlay">
-    <nav class="navbar">
-      <div class="logo">
-        <img src="assets/logo_horizontal_blanco.png" alt="logo">
-      </div>
+<app-header></app-header>
 
-      @if (!isMobile()) {
-        <div class="menu">
-          <a href="#home" class="menu-item active">
-            <span class="m3-icon material-icons-round">home</span>
-            <span>Inicio</span>
-          </a>
-          <a href="#services" class="menu-item">
-            <span class="m3-icon material-icons-round">miscellaneous_services</span>
-            <span>Servicios</span>
-          </a>
-          <a href="#about" class="menu-item">
-            <span class="m3-icon material-icons-round">account_circle</span>
-            <span>Acerca</span>
-          </a>
-          <a href="#contact" class="menu-item">
-            <span class="m3-icon material-icons-round">perm_phone_msg</span>
-            <span>Contacto</span>
-          </a>
-        </div>
-      }
-    </nav>
-
-    <div class="content">
-      <div class="text">
-        <h1>CENTRO</h1>
-        <h1>INTEGRAL DE</h1>
-        <h1><span>NEUROPSICOLOGÍA Y</span></h1>
-        <h1><span>REHABILITACIÓN</span></h1>
-        <p>Neurociencia aplicada a tu recuperación integral.</p>
-        <div class="social-icons">
-          <div class="img-c" (click)="openModal()"><span>Agendar</span><span class="material-symbols-outlined">calendar_today</span></div>
-          <div class="img-c" (click)="goTo('facebook')"><img src="assets/facebook.svg" alt="" srcset=""></div>
-          <div class="img-c" (click)="sendWhatsApp()"><img src="assets/whatsapp.svg" alt="" srcset=""></div>
-          <div class="img-c" (click)="goTo('instagram')"><img src="assets/instagram.svg" alt="" srcset=""></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- GENERAL SERVICES DESCRIPTION -->
-<app-section-services></app-section-services>
-
-<app-section-neuropsychology></app-section-neuropsychology>
-
-<app-section-early-stimulation></app-section-early-stimulation>
-
-<app-section-psychoterapy></app-section-psychoterapy>
+<router-outlet></router-outlet>
 
 <app-footer></app-footer>
 <!-- footer-toolbar.component.html -->
@@ -64,7 +13,7 @@
 
 >
 
-  <a href="#home" class="menu-item active">
+  <a routerLink="/" class="menu-item active">
     <span class="m3-icon material-icons-round">home</span>
     <span>Inicio</span>
   </a>
@@ -72,7 +21,7 @@
     <span class="m3-icon material-icons-round">miscellaneous_services</span>
     <span>Servicios</span>
   </a>
-  <a href="#about" class="menu-item">
+  <a routerLink="/nosotros" class="menu-item">
     <span class="m3-icon material-icons-round">account_circle</span>
     <span>Acerca</span>
   </a>
