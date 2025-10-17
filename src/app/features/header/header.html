@@ -1,0 +1,44 @@
+<header class="banner">
+  <div class="overlay">
+    <nav class="navbar">
+      <div class="logo">
+        <img [ngSrc]="'/assets/logo_horizontal_blanco.png'" alt="logo clinica" width="241" height="64" />
+      </div>
+
+      @if (!isMobile()) {
+        <div class="menu">
+          <a routerLink="/" class="menu-item active">
+            <span class="m3-icon material-icons-round">home</span>
+            <span>Inicio</span>
+          </a>
+          <a href="#services" class="menu-item">
+            <span class="m3-icon material-icons-round">miscellaneous_services</span>
+            <span>Servicios</span>
+          </a>
+          <a routerLink="/nosotros" class="menu-item">
+            <span class="m3-icon material-icons-round">account_circle</span>
+            <span>Acerca</span>
+          </a>
+          <a href="#contact" class="menu-item">
+            <span class="m3-icon material-icons-round">perm_phone_msg</span>
+            <span>Contacto</span>
+          </a>
+        </div>
+      }
+    </nav>
+
+    <div class="content">
+      <div class="text">
+        <h1>CINERI: <span>Neuropsicología</span> y <span>Rehabilitación</span> Integral</h1>
+        <p>Mejora tu calidad de vida con nuestros programas personalizados.</p>
+        <small>CINERI (Centro Integral de Neuropsicología y Rehabilitación)</small>
+        <div class="social-icons">
+          <div class="img-c" (click)="openModal()"><span>Agendar</span><span class="material-symbols-outlined">calendar_today</span></div>
+          <div class="img-c" (click)="goTo('facebook')"><img [ngSrc]="'/assets/facebook.svg'" alt="icono facebook" width="32" height="32" ></div>
+          <div class="img-c" (click)="sendWhatsApp()"><img [ngSrc]="'/assets/whatsapp.svg'" alt="icono whatsapp" width="32" height="32" ></div>
+          <div class="img-c" (click)="goTo('instagram')"><img [ngSrc]="'/assets/instagram.svg'" alt="icono instagram" width="32" height="32" ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

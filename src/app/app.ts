@@ -1,44 +1,59 @@
-import { Component, computed, effect, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ScrollAnimateDirective } from './directives/scroll-animate.directive'
-import { VWButtonComponent } from "./shared/vw-button/vw-button";
+import { Component, computed, effect, Inject, PLATFORM_ID, signal } from '@angular/core';
 import { SectionEarlyStimulation } from "./features/section-early-stimulation/section-early-stimulation";
 import { SectionNeuropsychology } from "./features/section-neuropsychology/section-neuropsychology";
 import { CommonModule } from '@angular/common';
 import { SectionServices } from "./features/section-services/section-services";
-import { CarouselComponent } from "./features/carousel/carousel";
 import { SectionPsychoterapy } from "./features/section-psychoterapy/section-psychoterapy";
 import { Footer } from "./features/footer/footer";
 import { OverlayService } from './services/overlay.service';
 import { AppointmentModal } from './features/appointment-modal/appointment-modal';
+import { NgOptimizedImage } from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
+import { Header } from "./features/header/header";
+import { RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-root',
-  imports: [VWButtonComponent, SectionEarlyStimulation, SectionNeuropsychology, CommonModule, SectionServices, SectionPsychoterapy, Footer],
+  imports: [CommonModule, Footer, Header, RouterOutlet],
   templateUrl: './app.html',
   styleUrls: ['./app.scss', './app-mobile.scss']
 })
 export class App {
   protected readonly title = signal('cineri_landing');
-  windowWidth = signal(window.innerWidth);
-  scrollY = signal(window.scrollY);
-  lastScrollY = signal(window.scrollY);
+
+
+
+  windowWidth = signal(0);
+  scrollY = signal(0);
+  lastScrollY = signal(0);
   isVisible = signal(true);
 
   isMobile = computed(() => this.windowWidth() <= 768);
 
   constructor(
-    private overlayService: OverlayService
+    private overlayService: OverlayService,
+    @Inject(PLATFORM_ID) private platformId: object
   ) {
+    if (isPlatformBrowser(this.platformId)) {
+      // 3. Si estamos en el navegador, actualiza los signals con los valores reales.
+      this.windowWidth.set(window.innerWidth);
+      this.scrollY.set(window.scrollY);
+      this.lastScrollY.set(window.scrollY);
+    }
+
     // Resize listener
     effect(() => {
+      if (isPlatformBrowser(this.platformId)) {
       const resizeHandler = () => this.windowWidth.set(window.innerWidth);
       window.addEventListener('resize', resizeHandler);
       return () => window.removeEventListener('resize', resizeHandler);
+      }
+      return
     });
 
     // Scroll listener
     effect(() => {
+      if (isPlatformBrowser(this.platformId)) {
       const scrollHandler = () => {
         const currentY = window.scrollY;
         const goingDown = currentY > this.lastScrollY();
@@ -47,6 +62,8 @@ export class App {
       };
       window.addEventListener('scroll', scrollHandler);
       return () => window.removeEventListener('scroll', scrollHandler);
+      }
+      return
     });
   }
 

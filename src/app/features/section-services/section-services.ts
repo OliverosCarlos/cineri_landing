@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { VWButtonComponent } from "../../shared/vw-button/vw-button";
 import { ScrollAnimateDirective } from '../../directives/scroll-animate.directive';
 import { OverlayService } from '../../services/overlay.service';
 import { AppointmentModal } from '../appointment-modal/appointment-modal';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-section-services',
@@ -13,13 +14,16 @@ import { AppointmentModal } from '../appointment-modal/appointment-modal';
 export class SectionServices {
 
   constructor(
-    private overlayService: OverlayService
+    private overlayService: OverlayService,
+    @Inject(PLATFORM_ID) private platformId: object
   ){
 
   }
 
   callNumber(){
+    if (isPlatformBrowser(this.platformId)) {
     window.location.href = 'tel:3111258361';
+    }
   }
 
   openModal(){
