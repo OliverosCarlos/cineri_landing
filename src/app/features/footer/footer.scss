@@ -1,4 +1,4 @@
-$footer-bg: #f4f6fb;
+$footer-bg: #f4f4f4;
 $footer-text: #4a4a4a;
 $footer-link: #2a6db0;
 $footer-accent: #1c4e80;
@@ -7,11 +7,21 @@ $footer-accent: #1c4e80;
   background-color: $footer-bg;
   padding: 2rem 1rem;
   font-family: 'Inter', sans-serif;
+  text-align: center;
 
   &__content {
-    max-width: 900px;
-    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 30%;
     text-align: center;
+    img {
+      max-width: 200px;
+      height: auto;
+    }
   }
 
   &__text {
@@ -21,8 +31,11 @@ $footer-accent: #1c4e80;
   }
 
   &__nav {
+    width: 30%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    text-align: start;
     flex-wrap: wrap;
     gap: 1.5rem;
     margin-bottom: 1rem;
@@ -39,34 +52,22 @@ $footer-accent: #1c4e80;
   }
 
   &__social {
+    width: 30%;
     display: flex;
     justify-content: center;
+    text-align: end;
     gap: 1rem;
     margin-bottom: 1.5rem;
+    flex-direction: column;
 
     img {
-      width: 24px;
-      height: 24px;
+      width: 48px;
+      height: 48px;
       transition: transform 0.3s ease;
 
       &:hover {
         transform: scale(1.1);
       }
-    }
-  }
-
-  &__cta {
-    margin-bottom: 1.5rem;
-
-    .footer__button {
-      background-color: $footer-accent;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-
     }
   }
 

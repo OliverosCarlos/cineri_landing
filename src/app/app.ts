@@ -11,10 +11,11 @@ import { NgOptimizedImage } from '@angular/common';
 import { isPlatformBrowser } from '@angular/common';
 import { Header } from "./features/header/header";
 import { RouterOutlet } from "@angular/router";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, Footer, Header, RouterOutlet],
+  imports: [CommonModule, Footer, Header, RouterOutlet, RouterModule],
   templateUrl: './app.html',
   styleUrls: ['./app.scss', './app-mobile.scss']
 })
@@ -27,7 +28,6 @@ export class App {
   scrollY = signal(0);
   lastScrollY = signal(0);
   isVisible = signal(true);
-
   isMobile = computed(() => this.windowWidth() <= 768);
 
   constructor(
@@ -54,14 +54,14 @@ export class App {
     // Scroll listener
     effect(() => {
       if (isPlatformBrowser(this.platformId)) {
-      const scrollHandler = () => {
-        const currentY = window.scrollY;
-        const goingDown = currentY > this.lastScrollY();
-        this.isVisible.set(!goingDown);
-        this.lastScrollY.set(currentY);
-      };
-      window.addEventListener('scroll', scrollHandler);
-      return () => window.removeEventListener('scroll', scrollHandler);
+        const scrollHandler = () => {
+          const currentY = window.scrollY;
+          const goingDown = currentY > this.lastScrollY();
+          this.isVisible.set(!goingDown);
+          this.lastScrollY.set(currentY);
+        };
+        window.addEventListener('scroll', scrollHandler);
+        return () => window.removeEventListener('scroll', scrollHandler);
       }
       return
     });

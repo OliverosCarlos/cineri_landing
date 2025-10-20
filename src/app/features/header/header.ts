@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-header',
   imports: [NgOptimizedImage, RouterModule],
   templateUrl: './header.html',
-  styleUrl: './header.scss'
+  styleUrls: ['./header.scss', './header-mobile.scss'],
 })
 export class Header {
 
@@ -16,7 +16,7 @@ export class Header {
   scrollY = signal(0);
   lastScrollY = signal(0);
   isVisible = signal(true);
-
+  navStickVisible = signal(false);
   isMobile = computed(() => this.windowWidth() <= 768);
 
   constructor(
@@ -49,6 +49,11 @@ export class Header {
         const goingDown = currentY > this.lastScrollY();
         this.isVisible.set(!goingDown);
         this.lastScrollY.set(currentY);
+        if (this.lastScrollY() > 100) {
+          this.navStickVisible.set(true);
+        }else{
+          this.navStickVisible.set(false);
+        }
       };
       window.addEventListener('scroll', scrollHandler);
       return () => window.removeEventListener('scroll', scrollHandler);

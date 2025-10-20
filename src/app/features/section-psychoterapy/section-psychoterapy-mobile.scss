@@ -32,22 +32,34 @@
 
     .grid-item {
       padding: 0px;
-
+      margin-bottom: 20px;
       .grid-item-head{
+        flex-direction: column;
         .div-img-aux{
           padding: 0px;
           padding-right: 10px;
+          border-radius: 0px;
+          text-align: center;
         }
 
         img{
           margin: 0px;
+          margin-bottom: 10px;
           border-radius: 8px;
-          width: 2rem;
+          width: 4rem;
         }
 
         .title{
+          border-radius: 20px 20px 0px 0px;
           padding: 5px;
+          .span-c{
+            padding-block: 10px;
+            box-sizing: border-box;
+          }
         }
+      }
+      .grid-item-body{
+        border-radius: 0px 0px 20px 20px;
       }
     }
 

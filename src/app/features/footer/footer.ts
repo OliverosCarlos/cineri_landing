@@ -6,7 +6,7 @@ import { isPlatformBrowser } from '@angular/common';
   selector: 'app-footer',
   imports: [VWButtonComponent],
   templateUrl: './footer.html',
-  styleUrl: './footer.scss'
+  styleUrls: ['./footer.scss', './footer-mobile.scss']
 })
 export class Footer {
 

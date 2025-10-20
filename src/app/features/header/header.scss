@@ -1,9 +1,167 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  height: 150px;
+  width: 100%;
+
+  /* --- CAMBIOS IMPORTANTES --- */
+  box-sizing: border-box; /* Buena práctica con padding */
+
+  /* Por defecto, la barra es transparente para que se vea el banner de fondo */
+  background-color: transparent;
+
+  /* Estilos base */
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 6px;
+  }
+
+  .menu-item .m3-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  /* Hover */
+  .menu-item:hover .m3-icon{
+    transform: scale(1.5);
+    margin-bottom: 1rem;
+  }
+
+  /* Activo */
+  .menu-item.active {
+    color: #fff;
+  }
+
+  /* Ícono activo */
+  .menu-item.active .m3-icon {
+    color: #fff;
+  }
+
+}
+
+.navbar2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  height: 150px;
+  height: 60px;
+  position: sticky;
+  background-color: #1f8ab8e2; /* Un negro casi sólido con algo de transparencia */
+  backdrop-filter: blur(10px); /* Efecto "cristal esmerilado", muy moderno */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  /* --- CAMBIOS IMPORTANTES --- */
+  padding: 1rem 2rem; /* Añade padding para que no se pegue a los bordes */
+  box-sizing: border-box; /* Buena práctica con padding */
+
+  .logo{
+    img{
+      transition: height 0.4s ease-in-out; /* Transición suave */
+      transition: width 0.4s ease-in-out; /* Transición suave */
+      height: 32px;
+      width: 121px;
+    }
+  }
+
+  /* Estilos base */
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .menu-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 6px;
+    gap: 5px;
+  }
+
+  .menu-item .m3-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  /* Hover */
+  .menu-item:hover .m3-icon{
+    transform: scale(1.5);
+    margin-bottom: 1rem;
+  }
+
+  /* Activo */
+  .menu-item.active {
+    color: #fff;
+  }
+
+  /* Ícono activo */
+  .menu-item.active .m3-icon {
+    color: #fff;
+  }
+
+}
+
+@starting-style {
+  .fade-in {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* 2. Define la transición para la clase .fade-in */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+/* --- Animación de SALIDA (Leave) --- */
+
+/* 1. Define el estado FINAL (hacia dónde se va) */
+.fade-out {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+
 .banner {
   position: relative;
   width: 100%;
-  height: 100vh;
-  background: url('/assets/consultorio.webp') no-repeat center center;
+  height: 50vh;
+  background: url('/assets/consultorio.webp') no-repeat;
   background-size: cover;
+  background-position: center 75%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,7 +169,7 @@
   .overlay {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, #1d75bd97, rgba(229, 229, 233, 0.7) );
+    background: linear-gradient(to top, rgba(229, 229, 233, 0.7), #1d75bd97 );
     padding: 2rem;
     box-sizing: border-box;
     display: flex;
@@ -19,87 +177,24 @@
     justify-content: space-between;
   }
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-
-    // .logo {
-    //   font-size: 1.5rem;
-    //   font-weight: bold;
-    //   img {
-    //     height: 6rem;
-    //   }
-    // }
-
-    /* Estilos base */
-    .menu {
-      display: flex;
-      justify-content: space-around;
-      padding: 1rem;
-      gap: 2rem;
-    }
-
-    .menu-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-      padding: 0.5rem;
-      border-radius: 6px;
-    }
-
-    .menu-item .m3-icon {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      transition: transform 0.3s ease;
-      transition: all 0.3s ease;
-
-    }
-
-    /* Hover */
-    .menu-item:hover .m3-icon{
-      transform: scale(1.5);
-      margin-bottom: 1rem;
-    }
-
-    /* Activo */
-    .menu-item.active {
-      color: #fff;
-    }
-
-    /* Ícono activo */
-    .menu-item.active .m3-icon {
-      color: #fff;
-    }
-
-  }
-
   .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
-
     .text {
       max-width: 50%;
       height: 100%;
 
       h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         line-height: 1.2;
         font-style: italic;
         text-shadow: 0px 3px 7px rgba(0,0,0,0.59);
         margin: 0px;
         padding: 0px;
-        span {
-          color: #145774;
-          text-shadow: 0px 3px 7px rgba(239, 239, 239, 0.59);
-        }
+        color: #145774;
+        text-shadow: 0px 3px 7px rgba(239, 239, 239, 0.59);
       }
 
       p {
@@ -108,67 +203,83 @@
         text-shadow: 0px 3px 7px rgba(0,0,0,0.59);
       }
 
-      .social-icons {
-        margin-top: 1rem;
-        display: flex;
-        gap: 5px;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 10px;
-
-        .img-c:nth-of-type(1){
-          padding: 10px 10px 10px 20px;
-          background-color: #fff;
-          color: #1F8BB8;
-          border-radius: 30px 10px 10px 30px;
-          span:nth-of-type(2){
-            font-size: 32px;
-            margin-left: 5px;
-          }
-        }
-
-        .img-c:nth-of-type(2){
-          padding: 10px;
-          background-color: #fff;
-          border-radius: 10px;
-        }
-
-        .img-c:nth-of-type(3){
-          padding: 10px;
-          background-color: #fff;
-          border-radius: 10px;
-        }
-
-        .img-c:nth-of-type(4){
-          padding: 10px 20px 10px 10px;
-          background-color: #fff;
-          border-radius: 10px 30px 30px 10px;
-        }
-
-        .img-c {
-          display: flex;
-          align-items: center;
-          color: white;
-          font-size: 1.2rem;
-          padding: 10px;
-          border: solid 3px #1F8BB8;
-          img{
-            margin: 0px;
-            padding: 0px;
-            // border-radius: 100%;
-            width: 32px;
-            height: 32px;
-            color: #114570;
-          }
-
-          &:hover{
-            background-color: whitesmoke;
-            cursor: pointer;
-          }
-        }
-
-
+      small{
+        color: #145774;
       }
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+      display: flex;
+      gap: 2px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+
+      .img-c:nth-of-type(1){
+        padding: 10px 10px 10px 20px;
+        background-color: #fff;
+        color: #1F8BB8;
+        border-radius: 30px 10px 10px 30px;
+        span:nth-of-type(2){
+          font-size: 32px;
+          margin-left: 5px;
+        }
+      }
+
+      .img-c:nth-of-type(2){
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+
+      .img-c:nth-of-type(3){
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+
+      .img-c:nth-of-type(4){
+        padding: 10px 20px 10px 10px;
+        background-color: #fff;
+        border-radius: 10px 30px 30px 10px;
+      }
+
+      .img-c {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 1.2rem;
+        padding: 10px;
+        border: solid 3px #1F8BB8;
+        img{
+          margin: 0px;
+          padding: 0px;
+          // border-radius: 100%;
+          width: 32px;
+          height: 32px;
+          color: #114570;
+        }
+
+        &:hover{
+          background-color: whitesmoke;
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+}
+
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .text{
+    h1 {
+      font-size: 2rem !important;
+    }
+    p{
+      font-size: 1.5rem !important;
+      font-weight: bold;
     }
   }
 }

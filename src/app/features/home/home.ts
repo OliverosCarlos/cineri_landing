@@ -19,9 +19,9 @@ export class Home implements OnInit{
 
   ngOnInit(): void {
     this.seoService.updateMetaTags(
-      'Clínica de Neurodesarrollo y Psicoterapia en Tepic Nayarit',
+      'Clínica de Neuropsicología y Psicoterapia en Tepic Nayarit',
       'Expertos en neuropsicología, estimulación temprana y psicoterapia para niños y adultos en la zona de Tepic Nayarit.',
-      'https://cineri-tepic.web.app/assets/social-share-template.png'
+      'https://cineri-tepic.web.app/assets/social-share-template1_1.png'
     );
   }
 }

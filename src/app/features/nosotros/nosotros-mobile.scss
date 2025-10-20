@@ -1,0 +1,79 @@
+@media (max-width: 800px) {
+  main {
+    padding: 0px;
+
+    .main-header{
+      padding: 10px;
+      h1{
+        font-size: 2rem;
+      }
+    }
+  }
+
+  #conocenos{
+    padding-inline: 10px;
+  }
+  section {
+    padding: 0px;
+  }
+
+  #conocenos{
+    .cards{
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  #filosofia{
+    margin: 20px 0px 0px 0px;
+    padding: 10px;
+    ul{
+      flex-direction: column;
+      gap: 20px;
+      padding: 0px;
+      li{
+        padding: 20px;
+      }
+    }
+  }
+
+  .main-services{
+    h2{
+      font-size: 2rem;
+      padding: 10px 20px;
+    }
+
+    p{
+      font-size: 1.5rem;
+      padding: 0px 20px;
+      text-align: justify;
+    }
+
+    section{
+      padding: 10px;
+      flex-direction: column;
+    }
+
+    section:nth-of-type(2) { flex-direction: column-reverse;}
+  }
+
+  article{
+
+    .big-card{
+      .overlay3{
+        padding: 10px;
+        h2{
+          font-size: 1.5rem;
+          max-width: 100%;
+        }
+        p{
+          font-size: 1rem;
+          max-width: 100%;
+          text-align: justify;
+        }
+      }
+    }
+
+  }
+
+}
