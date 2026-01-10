@@ -275,23 +275,66 @@ p {
   }
 
   .services-items {
-      list-style-type: none;
-      padding: 20px;
-      max-width: 500px;
-    }
+    list-style-type: none;
+    padding: 20px;
+    max-width: 500px;
+  }
 
-    .services-items li {
+  .services-items li {
+    display: flex;
+    align-items: flex-start; /* Alinea al inicio (si el texto ocupa varias líneas) */
+    font-size: 1rem; /* Tamaño de texto legible */
+    align-items: center;
+    color: #165A92;
+  }
+
+  .services-items .material-symbols-outlined {
+    margin-right: 12px; /* Espacio entre el icono y el texto */
+    font-size: 32px; /* Tamaño del icono */
+    color: #369DA4;
+    position: relative;
+    top: 3px; /* Pequeño ajuste vertical para alinear mejor */
+  }
+
+  #especialistas{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    header{
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .specialists-cards{
       display: flex;
-      align-items: flex-start; /* Alinea al inicio (si el texto ocupa varias líneas) */
-      font-size: 1rem; /* Tamaño de texto legible */
-      align-items: center;
-      color: #165A92;
-    }
+      justify-content: center;
+      .specialist-card{
+        display: flex;
+        gap: 20px;
+        background-color: #f5f5f5;
+        max-width: 33%;
+        // border: solid 3px #41BDC6;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
-    .services-items .material-symbols-outlined {
-      margin-right: 12px; /* Espacio entre el icono y el texto */
-      font-size: 32px; /* Tamaño del icono */
-      color: #369DA4;
-      position: relative;
-      top: 3px; /* Pequeño ajuste vertical para alinear mejor */
+        .specialist-info{
+          background-color: linear-gradient(180deg,rgba(255, 255, 255, 0.2) 0%, rgba(236, 236, 236, 0.7) 100%);
+          padding: 20px 10px;
+          h3{
+            font: 1.5rem;
+          }
+          p{
+            padding-right: 20px;
+            text-align: justify;
+          }
+          .specialist-footer{
+            text-align: center;
+          }
+        }
+        img{
+          border-radius: 20px;
+          width: 50%;
+          object-fit: cover;
+        }
+      }
     }
+  }

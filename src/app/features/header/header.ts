@@ -1,16 +1,19 @@
-import { Component, computed, effect, Inject, PLATFORM_ID, signal } from '@angular/core';
-import { isPlatformBrowser, NgOptimizedImage } from '@angular/common';
+import { Component, computed, effect, Inject, PLATFORM_ID, signal, input, Input } from '@angular/core';
+import { isPlatformBrowser, NgOptimizedImage, NgStyle } from '@angular/common';
 import { OverlayService } from '../../services/overlay.service';
 import { AppointmentModal } from '../appointment-modal/appointment-modal';
 import { RouterModule } from '@angular/router';
-
 @Component({
   selector: 'app-header',
-  imports: [NgOptimizedImage, RouterModule],
+  imports: [NgOptimizedImage, RouterModule, NgStyle],
   templateUrl: './header.html',
   styleUrls: ['./header.scss', './header-mobile.scss'],
 })
 export class Header {
+
+  @Input() title: string = 'CINERI: Neuropsicología, Estimulación Temprana y Pscioterapia en Tepic Nayarit.';
+  @Input() subtitle: string = 'Mejora tu calidad de vida con nuestros programas personalizados.';
+  @Input() backgroundImageUrl: string = '/assets/consultorio.webp';
 
   windowWidth = signal(0);
   scrollY = signal(0);
@@ -49,7 +52,7 @@ export class Header {
         const goingDown = currentY > this.lastScrollY();
         this.isVisible.set(!goingDown);
         this.lastScrollY.set(currentY);
-        if (this.lastScrollY() > 100) {
+        if (this.lastScrollY() > 60 && !this.isMobile()) {
           this.navStickVisible.set(true);
         }else{
           this.navStickVisible.set(false);
@@ -80,7 +83,7 @@ export class Header {
   }
 
   sendWhatsApp() {
-    const numero = '523111258361'; //
+    const numero = '523111212549'; //
     const mensaje = 'Hola, me gustaría agendar una cita.';
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');

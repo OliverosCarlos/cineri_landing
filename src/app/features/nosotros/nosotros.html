@@ -1,3 +1,9 @@
+<app-header
+  [title]="'Nuestra Misión: Tu Bienestar Integral'"
+  [subtitle]="'Un Espacio Dedicado a tu Bienestar Mental y Desarrollo.'"
+  [backgroundImageUrl]="'/assets/grupo_pros.webp'"
+  >
+</app-header>
 <main>
 
   <header class="main-header">
@@ -75,7 +81,7 @@
       <div class="card">
         <div class="overlay">
           <h3>Conoce más sobre nuestros servicios de Neuropsicología</h3>
-          <vw-button icon="calendar_today" variant="secondary" class="btn" (click)="openModal()"> Agendar </vw-button>
+          <vw-button icon="read_more" variant="secondary" class="btn" (click)="goTo('servicios/neuropsicologia')"> Leer más </vw-button>
         </div>
       </div>
     </section>
@@ -84,7 +90,7 @@
       <div class="card">
         <div class="overlay">
           <h3>Descubre cómo funciona la Estimulación Temprana</h3>
-          <vw-button icon="calendar_today" variant="secondary" class="btn" (click)="openModal()"> Agendar </vw-button>
+          <vw-button icon="read_more" variant="secondary" class="btn" (click)="goTo('servicios/estimulacion-temprana')"> Leer más </vw-button>
         </div>
       </div>
       <div>
@@ -133,7 +139,7 @@
             Terapia de pareja y resolución de conflictos.
           </li>
           <li>
-            <span class="material-symbols-outlined">heart_arrow</span>
+            <span class="material-symbols-outlined">diversity_4</span>
             Acompañamiento en procesos de duelo y cambios de vida.
           </li>
           <li>
@@ -145,7 +151,7 @@
       <div class="card">
         <div class="overlay">
           <h3>Explora nuestros enfoques de Psicoterapia</h3>
-          <vw-button icon="calendar_today" variant="secondary" class="btn" (click)="openModal()"> Agendar </vw-button>
+          <vw-button icon="read_more" variant="secondary" class="btn" (click)="goTo('servicios/psicoterapia')"> Leer más </vw-button>
         </div>
       </div>
     </section>
@@ -161,5 +167,27 @@
       </div>
     </div>
   </article>
+
+  <section id="especialistas">
+    <header>
+      <h3 class="secondary-title"><span class="t1">Conoce a Nuestros Especialistas</span><span class="t2">Tu Equipo de Confianza</span></h3>
+    </header>
+    <p>En CINERI, contamos con un equipo multidisciplinario de profesionales altamente capacitados y apasionados por su labor. Cada uno de ellos aporta su experiencia y dedicación para brindarte el mejor cuidado posible.</p>
+    <div class="specialists-cards">
+      @for (specialist of specialists(); track specialist.id) {
+        <div class="specialist-card">
+          <img [src]="specialist.photoUrl" [alt]="specialist.name" />
+          <div class="specialist-info">
+            <h3>{{specialist.role+" "+specialist.name }}</h3>
+            <h4>{{specialist.role}}</h4>
+            <p class="bio">{{ specialist.bio }}</p>
+            <div class="specialist-footer">
+              <vw-button icon="read_more" variant="secondary" class="btn" (click)="goTo('nosotros/profesionales/magali-madera')"> Leer más </vw-button>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
 </main>
 

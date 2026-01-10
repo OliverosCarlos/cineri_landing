@@ -1,8 +1,9 @@
-import { Component, signal } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, signal } from '@angular/core';
 import { VWButtonComponent } from "../../shared/vw-button/vw-button";
 import { CarouselComponent } from "../carousel/carousel";
 import { OverlayService } from '../../services/overlay.service';
 import { AppointmentModal } from '../appointment-modal/appointment-modal';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-section-neuropsychology',
@@ -13,7 +14,8 @@ import { AppointmentModal } from '../appointment-modal/appointment-modal';
 export class SectionNeuropsychology {
 
   constructor(
-    private overlayService: OverlayService
+    private overlayService: OverlayService,
+    @Inject(PLATFORM_ID) private platformId: object
   ){}
 
   items = signal([
@@ -25,5 +27,11 @@ export class SectionNeuropsychology {
 
   openModal(){
     this.overlayService.openModal(AppointmentModal)
+  }
+
+  callNumber(){
+    if (isPlatformBrowser(this.platformId)) {
+    window.location.href = 'tel:3111212549';
+    }
   }
 }

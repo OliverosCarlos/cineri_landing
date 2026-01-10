@@ -76,4 +76,24 @@
 
   }
 
+  #especialistas{
+    width: 100%;
+    padding: 10px;
+
+    .specialists-cards{
+      .specialist-card{
+        flex-direction: column;
+        min-width: 95%;
+        gap: 10px;
+
+        img{
+          border-radius: 20px;
+          width: 100%;
+          max-height: 300px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
 }

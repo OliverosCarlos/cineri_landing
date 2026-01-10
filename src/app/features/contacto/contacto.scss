@@ -1,0 +1,54 @@
+main{
+  background-color: #f5f5f5;
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.contacto{
+  padding: 40px;
+  h1{
+    color: #1D75BD;
+  }
+
+  h2{
+    color: #165A92;
+  }
+}
+
+ul{
+  display: flex;
+  gap: 20px;
+  li{
+    display: flex;
+    align-items: center;
+    img{
+      width: 50px;
+      height: 50px;
+      margin-right: 20px;
+    }
+  }
+}
+
+.container-info{
+  display: flex;
+  justify-content: space-evenly;
+  .item{
+    width: 45%;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container-info{
+    flex-direction: column;
+    gap: 20px;
+    .item{
+      width: 95%;
+    }
+  }
+
+}

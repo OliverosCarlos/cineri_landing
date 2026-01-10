@@ -1,0 +1,283 @@
+main{
+  background-color: #fdfdfd;
+  // background:
+  //   linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+  //   url('/assets/white-logo.png') no-repeat right 20px bottom 20px;
+  // background-size: 70svh auto;
+  .main-header{
+    background-color: #fdfdfd;
+    text-align: center;
+    padding: 10px 40px;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1F8BB8;
+}
+
+p {
+  color: #165A92;
+}
+
+#introduccion{
+  .card{
+    background: url('/assets/ninos_jugando.webp') no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+  }
+}
+
+.section-p-m{
+  display: flex;
+  gap: 20px;
+  padding-inline: 20px;
+
+  p{
+    max-width: 40%;
+    font-size: 1.5rem;
+  }
+  .card{
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    position: relative;
+    h4{
+      padding: 20px;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.overlay2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #e9f0f2b3;
+  background: linear-gradient(180deg,rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#paquetes{
+  margin-block: 20px;
+
+
+table{
+  margin-inline: auto;
+  border-radius: 20px;
+  border: solid 1px rgb(233, 233, 233);
+  padding: 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  .material-symbols-outlined{
+    border: solid;
+    border-radius: 5px;
+  }
+
+  th{
+    padding: 40px;
+    color: #fff;
+  }
+  td{
+    padding: 10px 40px;
+    text-align: center;
+    .check{
+      color: #41BDC6;
+      font-size: 24px;
+    }
+    .uncheck{
+      color: red;
+      font-size: 24px;
+    }
+  }
+  .title{
+    text-align: left;
+    font-weight: bold;
+    color: #165A92;
+    font-size: 1.1rem;
+  }
+}
+
+  .hp1{
+    border-radius: 20px 0px 0px 0px;
+  }
+  .hp2{
+    background-color: #45C5CF;
+  }
+  .hp3{
+    background-color: #41BDC6;
+    border-radius: 0px 20px 0px 0px;
+  }
+  // .hp4{
+  //   background-color: #369DA4;
+  //   border-radius: 0px 20px 0px 0px;
+  // }
+}
+
+
+$color-text-title: #145774;
+$color-icon-primary: #2563eb;
+$color-icon-bg: #dbeafe;
+$color-bg-light: #f8fafc;
+$color-bg-card: #ffffff;
+$color-text-body: #4b5563; // gray-600
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+/* Estilo base para la fuente */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Estilo para los íconos de Google */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  line-height: 1; // Ayuda a alinear mejor
+}
+
+/* Contenedor principal de la sección */
+.service-details {
+  background-color: $color-bg-light;
+  padding: 4rem 0; // 64px
+
+  @media (min-width: 640px) {
+    padding: 6rem 0; // 96px
+  }
+
+  /* Contenedor interno centrado */
+  &__container {
+    max-width: 1280px; // 7xl
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem; // 24px
+    padding-right: 1.5rem; // 24px
+  }
+
+  /* Cabecera de la sección */
+  &__header {
+    max-width: 896px; // 3xl
+    margin: 0 auto 4rem auto; // mb-16
+    text-align: center;
+  }
+
+  /* Título principal de la sección */
+  &__title {
+    font-size: 2.25rem; // 36px
+    font-weight: 700;
+    color: $color-text-title;
+    line-height: 1.2;
+
+    @media (min-width: 640px) {
+      font-size: 2.75rem; // 44px
+    }
+  }
+
+  /* Subtítulo/descripción de la sección */
+  &__subtitle {
+    font-size: 1.125rem; // 18px
+    color: var(--color-text-body);
+    margin-top: 1rem; // 16px
+  }
+
+  /* Grid que contiene las tarjetas */
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr; // 1 columna en móvil
+    gap: 2rem; // 32px
+
+    // 2 columnas en tablets
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    // 3 columnas en desktop
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+/* Estilos para cada tarjeta de servicio */
+.service-card {
+  background-color: $color-bg-card;
+  border-radius: 0.75rem; // 12px
+  padding: 1.5rem; // 24px
+  box-shadow: $shadow-lg;
+  transition: all 0.3s ease;
+
+  // Layout móvil (columna, centrado)
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &:hover {
+    box-shadow: $shadow-xl;
+    transform: scale(1.02);
+  }
+
+  /* Círculo que contiene el ícono */
+  &__icon-wrapper {
+    flex-shrink: 0;
+    background-color: $color-icon-bg;
+    color: $color-icon-primary;
+    border-radius: 9999px; // Círculo
+    padding: 1rem; // 16px
+    margin-bottom: 1rem; // Espacio en móvil
+    display: flex; // Centra el ícono
+    align-items: center;
+    justify-content: center;
+
+    .material-symbols-outlined {
+      font-size: 2.5rem; // 40px
+    }
+  }
+
+  /* Contenedor del texto */
+  &__content {
+    // No necesita estilos por ahora
+  }
+
+  /* Título de la tarjeta */
+  &__title {
+    font-size: 1.25rem; // 20px
+    font-weight: 600;
+    color: $color-text-title;
+    margin-bottom: 0.5rem; // 8px
+  }
+
+  /* Descripción de la tarjeta */
+  &__description {
+    font-size: 1rem; // 16px
+    color: var(--color-text-body);
+    line-height: 1.6;
+  }
+
+  /* Media query para pantallas 'sm' (640px) y mayores.
+    Cambia el layout de la tarjeta a fila.
+  */
+  @media (min-width: 640px) {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+
+    &__icon-wrapper {
+      margin-bottom: 0;
+      margin-right: 1.5rem; // 24px
+    }
+  }
+}

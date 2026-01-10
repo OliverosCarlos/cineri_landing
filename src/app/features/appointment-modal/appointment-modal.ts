@@ -1,6 +1,7 @@
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { VWButtonComponent } from "../../shared/vw-button/vw-button";
 import { isPlatformBrowser } from '@angular/common';
+import { OverlayService } from '../../services/overlay.service';
 
 @Component({
   selector: 'app-appointment-modal',
@@ -12,10 +13,13 @@ export class AppointmentModal {
 
   correoLink: string = '';
 
-  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: object,
+    private overlayService: OverlayService
+  ) {}
 
   sendWhatsApp() {
-    const numero = '523111258361'; //
+    const numero = '523111212549';
     const mensaje = 'Hola, me gustaría agendar una cita.';
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
     if (isPlatformBrowser(this.platformId)) {
@@ -31,6 +35,10 @@ export class AppointmentModal {
     if (isPlatformBrowser(this.platformId)) {
     window.open(this.correoLink, '_blank');
     }
+  }
+
+  closeModal() {
+    this.overlayService.closeModal();
   }
 
 }

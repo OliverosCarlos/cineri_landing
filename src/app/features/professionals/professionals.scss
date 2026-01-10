@@ -1,0 +1,491 @@
+main{
+  background-color: #efefef;
+  padding: 10px 15%;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+    url('/assets/white-logo.png') no-repeat right 20px bottom 20px;
+  background-size: 100svh auto;
+  .container{
+    margin-block: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 20px;
+  }
+  .main-header{
+    background-color: #fdfdfd;
+    text-align: center;
+    padding: 10px 40px;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+h1, h2, h4, h5, h6 {
+  color: #1F8BB8;
+}
+
+h3 {
+  color: #2B7C82;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+p {
+  color: #165A92;
+}
+
+section {
+  background-color: #fdfdfd;
+  margin: 0px;
+}
+
+#introduccion{
+  .card{
+    background: url('/assets/familia-sana.webp') no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+  }
+}
+
+.section-p-m{
+  display: flex;
+  gap: 20px;
+  padding-inline: 20px;
+
+  p{
+    max-width: 40%;
+    font-size: 1.5rem;
+  }
+  .card{
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    position: relative;
+    h4{
+      padding: 20px;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
+.hp1{
+  // background-color: rgb(233, 233, 233);
+  border-radius: 20px 0px 0px 0px;
+}
+.hp2{
+  background-color: #1D75BD;
+}
+.hp3{
+  background-color: #1B6FB4;
+}
+.hp4{
+  background-color: #165A92;
+  border-radius: 0px 20px 0px 0px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 200,
+  'opsz' 40;
+}
+
+
+$color-text-title: #145774;
+$color-icon-primary: #2563eb;
+$color-icon-bg: #dbeafe;
+$color-bg-light: #f8fafc;
+$color-bg-card: #ffffff;
+$color-text-body: #4b5563; // gray-600
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+/* Estilo base para la fuente */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Estilo para los íconos de Google */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  line-height: 1; // Ayuda a alinear mejor
+}
+
+
+  #especialista{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px 20px 0px 0px;
+    header{
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .specialist-card{
+      display: flex;
+      width: 100%;
+      gap: 20px;
+
+      .specialist-info{
+        background-color: linear-gradient(180deg,rgba(255, 255, 255, 0.2) 0%, rgba(236, 236, 236, 0.7) 100%);
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+
+        .specialist-name{
+          margin-bottom: 5px;
+          h2{
+            font-size: 3rem;
+            margin: 0;
+          }
+          span{
+            margin-left: 20px;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #369DA4;
+          }
+        }
+
+        p{
+          padding-right: 20px;
+          text-align: justify;
+        }
+        .specialist-footer{
+          text-align: center;
+        }
+
+        .professional-education{
+          .professional-education-cards{
+            display: flex;
+            justify-content: space-evenly;
+            .professional-education-card{
+              display: flex;
+              flex-direction: column;
+              padding: 10px;
+              border-radius: 10px;
+              box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+              background: linear-gradient(135deg, #41BDC6 0%, #369DA4 100%);
+              width: 45%;
+              .card-item{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 10px;
+                padding: 5px;
+                color: #fff;
+
+                .material-symbols-outlined {
+                  font-size: 1.2rem;
+                  margin-top: 2px;
+                }
+
+              }
+            }
+
+            .maestria{
+              background: linear-gradient(135deg, #1B6FB4 0%, #165A92 100%);
+            }
+          }
+
+        }
+
+      }
+
+      img{
+        border-radius: 20px;
+        width: 40%;
+        // max-height: 500px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .stats-section {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1F8BB8d0 0%, #1a7196d0 100%);
+
+    .stats-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      min-width: 150px;
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+
+      &:nth-child(1) { animation-delay: 0.1s; }
+      &:nth-child(2) { animation-delay: 0.2s; }
+      &:nth-child(3) { animation-delay: 0.3s; }
+      &:nth-child(4) { animation-delay: 0.4s; }
+
+      .stat-icon {
+        font-size: 3rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 10px;
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #fff;
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+
+      .stat-label {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .certifications {
+    padding: 20px;
+    background-color: #fdfdfd88;
+
+    .card-certifications{
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+      background-color: #fdfdfd88;
+
+      h3 {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 5px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          margin-bottom: 10px;
+          padding: 5px;
+
+          .material-symbols-outlined {
+            color: #1F8BB8;
+            font-size: 1.2rem;
+            margin-top: 2px;
+          }
+
+          .cert-text {
+              font-size: 1rem;
+              color: #333;
+          }
+        }
+      }
+    }
+
+  }
+
+
+  /* Contenedor principal de la sección */
+.service-details {
+  width: 100%;
+  padding: 1px 20px 20px 20px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #fdfdfd 0%, #fdfdfd88 100%);
+  // /* Contenedor interno centrado */
+  // &__container {
+  //   max-width: 1280px; // 7xl
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   padding-left: 1.5rem; // 24px
+  //   padding-right: 1.5rem; // 24px
+  // }
+
+  /* Cabecera de la sección */
+  &__header {
+    max-width: 896px; // 3xl
+  }
+
+  /* Título principal de la sección */
+  &__title {
+    font-size: 2.25rem; // 36px
+    font-weight: 700;
+    color: $color-text-title;
+    line-height: 1.2;
+
+    @media (min-width: 640px) {
+      font-size: 2.75rem; // 44px
+    }
+  }
+
+  /* Subtítulo/descripción de la sección */
+  &__subtitle {
+    font-size: 1.125rem; // 18px
+    color: var(--color-text-body);
+    margin-top: 1rem; // 16px
+  }
+
+  /* Grid que contiene las tarjetas */
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr; // 1 columna en móvil
+    gap: 2rem; // 32px
+
+    // 2 columnas en tablets
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    // 3 columnas en desktop
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+/* Estilos para cada tarjeta de servicio */
+.service-card {
+  background-color: $color-bg-card;
+  border-radius: 0.75rem; // 12px
+  padding: 1.5rem; // 24px
+  box-shadow: $shadow-lg;
+  transition: all 0.3s ease;
+
+  // Layout móvil (columna, centrado)
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &:hover {
+    box-shadow: $shadow-xl;
+    transform: scale(1.02);
+  }
+
+  /* Círculo que contiene el ícono */
+  &__icon-wrapper {
+    flex-shrink: 0;
+    background-color: $color-icon-bg;
+    color: $color-icon-primary;
+    border-radius: 9999px; // Círculo
+    padding: 1rem; // 16px
+    margin-bottom: 1rem; // Espacio en móvil
+    display: flex; // Centra el ícono
+    align-items: center;
+    justify-content: center;
+
+    .material-symbols-outlined {
+      font-size: 2.5rem; // 40px
+    }
+  }
+
+  /* Título de la tarjeta */
+  &__title {
+    // font-size: 1.25rem; // 20px
+    font-weight: 600;
+    color: $color-text-title;
+    margin-bottom: 0.5rem; // 8px
+  }
+
+  /* Descripción de la tarjeta */
+  &__description {
+    font-size: 1rem; // 16px
+    color: var(--color-text-body);
+    line-height: 1.6;
+  }
+
+  /* Media query para pantallas 'sm' (640px) y mayores.
+    Cambia el layout de la tarjeta a fila.
+  */
+  @media (min-width: 640px) {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+
+    &__icon-wrapper {
+      margin-bottom: 0;
+      margin-right: 1.5rem; // 24px
+    }
+  }
+}
+
+.about-me{
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fdfdfd88;
+
+  .about-me-icons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    img{
+      width: 100px;
+    }
+  }
+}
+
+.contact-information{
+  width: 100%;
+  padding: 20px;
+  border-radius: 0px 0px 20px 20px;
+  box-sizing: border-box;
+  background-color: #fdfdfd88;
+
+  .contact-information-container{
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background: linear-gradient(135deg, #41BDC6 0%, #369DA4 100%);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    p{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-size: 1.5rem;
+    }
+
+  }
+}

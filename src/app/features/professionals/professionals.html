@@ -1,0 +1,130 @@
+<app-header
+  [title]="'Neuropsicóloga Magali Madera'"
+  [subtitle]="'Neuropsicóloga en Tepic Nayarit'"
+  [backgroundImageUrl]="'/assets/consultorio.webp'"
+  >
+</app-header>
+
+<main>
+
+  <div class="container">
+    <section id="especialista">
+      <div class="specialist-card">
+        <img [src]="specialist().photoUrl" [alt]="specialist().name" />
+        <div class="specialist-info">
+          <header class="specialist-name">
+            <h2>{{specialist().name }}</h2>
+            <span>{{specialist().role}}</span>
+          </header>
+          <div class="specialist-bio">
+            <h3> <span class="material-symbols-outlined">local_library</span> Perfil Profesional</h3>
+            <p>{{specialist().bio}}</p>
+          </div>
+          <div class="professional-education">
+            <h3><span class="material-symbols-outlined">person_book</span> Educación Profesional</h3>
+            <div class="professional-education-cards">
+              <div class="professional-education-card">
+                <span class="card-item"><span class="material-symbols-outlined">school</span> Licenciatura en Psicología</span>
+                <span class="card-item"><span class="material-symbols-outlined">location_city</span> Universidad Autónoma de Nayarit</span>
+                <span class="card-item"><span class="material-symbols-outlined">badge</span> Cedula: 12946329</span>
+              </div>
+              <div class="professional-education-card maestria">
+                <span class="card-item"><span class="material-symbols-outlined">school</span> Maestría en Neuropsicología</span>
+                <span class="card-item"><span class="material-symbols-outlined">location_city</span> Universidad de Guadalajara</span>
+                <span class="card-item"><span class="material-symbols-outlined">badge</span> Cedula: 15330721</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-details">
+      <!-- <div class="service-details__container"> -->
+
+        <!-- Cabecera de la sección -->
+        <div class="service-details__header">
+          <h3><span class="material-symbols-outlined">medical_services</span> Áreas de Intervención Clínica </h3>
+        </div>
+
+        <!-- Grid de elementos -->
+        <div class="service-details__grid">
+
+          @for (element of specialist().clinical_intervention_areas; track element.id) {
+            <div class="service-card">
+              <div class="service-card__content">
+                <h4 class="service-card__title">{{ element.title }}</h4>
+              </div>
+            </div>
+          } @empty {
+            <!-- Esto se muestra si la señal items está vacía -->
+            <p class="service-details__subtitle">
+              No hay servicios para mostrar en este momento.
+            </p>
+          }
+
+        <!-- </div> -->
+      </div>
+    </section>
+
+    <section class="certifications">
+      <div class="card-certifications">
+        <h3><span class="material-symbols-outlined">verified</span> Formación Adicional</h3>
+        <ul>
+          @for (cert of specialist().certifications; track cert) {
+            <li>
+              <span class="material-symbols-outlined icon">workspace_premium</span>
+              <span class="cert-text">{{ cert }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="stats-container">
+        <div class="stat-item">
+          <span class="material-symbols-outlined stat-icon">groups</span>
+          <span class="stat-number">{{ animatedPatients() }}+</span>
+          <span class="stat-label">Pacientes Atendidos</span>
+        </div>
+        <div class="stat-item">
+          <span class="material-symbols-outlined stat-icon">school</span>
+          <span class="stat-number">{{ animatedCertifications() }}</span>
+          <span class="stat-label">Diplomados</span>
+        </div>
+        <div class="stat-item">
+          <span class="material-symbols-outlined stat-icon">menu_book</span>
+          <span class="stat-number">{{ animatedCourses() }}</span>
+          <span class="stat-label">Cursos Impartidos</span>
+        </div>
+        <div class="stat-item">
+          <span class="material-symbols-outlined stat-icon">calendar_month</span>
+          <span class="stat-number">{{ animatedYears() }}</span>
+          <span class="stat-label">Años de Experiencia</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-me">
+      <div class="about-me-container">
+        <h3> <span class="material-symbols-outlined">local_library</span> Sobre Mí</h3>
+        <p> {{ specialist().about_me }} </p>
+        <div class="about-me-icons">
+          <img src="/assets/palomitas-de-maiz.png" alt="" srcset="">
+          <img src="/assets/sombrilla-de-playa.png" alt="" srcset="">
+          <img src="/assets/analitica.png" alt="" srcset="">
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-information">
+      <h3> <span class="material-symbols-outlined">id_card</span> Información de Contacto</h3>
+      <div class="contact-information-container">
+        <p>  <span class="material-symbols-outlined">call</span> 311-121-25-49</p>
+        <p>  <span class="material-symbols-outlined">mail</span> cineri.tepic@gmail.com</p>
+      </div>
+    </section>
+  </div>
+
+</main>

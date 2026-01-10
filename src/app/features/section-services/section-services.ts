@@ -4,10 +4,11 @@ import { ScrollAnimateDirective } from '../../directives/scroll-animate.directiv
 import { OverlayService } from '../../services/overlay.service';
 import { AppointmentModal } from '../appointment-modal/appointment-modal';
 import { isPlatformBrowser } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-section-services',
-  imports: [VWButtonComponent, ScrollAnimateDirective],
+  imports: [VWButtonComponent, ScrollAnimateDirective, RouterModule],
   templateUrl: './section-services.html',
   styleUrls: ['./section-services.scss', './section-services-mobile.scss']
 })
@@ -22,7 +23,7 @@ export class SectionServices {
 
   callNumber(){
     if (isPlatformBrowser(this.platformId)) {
-    window.location.href = 'tel:3111258361';
+    window.location.href = 'tel:3111212549';
     }
   }
 

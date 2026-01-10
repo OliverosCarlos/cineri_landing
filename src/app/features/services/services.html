@@ -1,0 +1,109 @@
+<app-header
+  [title]="'Nuestros Servicios de Salud Mental y Desarrollo Integral.'"
+  [subtitle]="'Un Espacio Dedicado a tu Bienestar Mental y Desarrollo.'"
+  [backgroundImageUrl]="'/assets/servicios-iso.png'"
+  >
+</app-header>
+
+<main>
+
+  <header class="main-header">
+    <h2>Descubre Nuestros Servicios: Un Camino Hacia el Bienestar Integral</h2>
+  </header>
+
+  <section id="introduccion" class="section-p-m">
+    <p>
+      En <strong>CINERI</strong>, creemos en el potencial de cada individuo.
+      Nuestra misión es acompañarte a ti y a tu familia en el camino hacia una vida más plena y saludable,
+      abordando los desafíos desde su raíz con un enfoque científico y profundamente humano.
+    </p>
+    <div class="card">
+      <div class="overlay2">
+        <h4>Comprometidos con brindar diagnósticos precisos y tratamientos efectivos, diseñados para cada etapa de la vida.</h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="pilares" class="section-big-cards">
+    <header class="section-header">
+      <h2><span class="t1">Nuestra Filosofía</span><span class="t2">Cuidado Integral Basado en la Ciencia y la Empatía</span></h2>
+    </header>
+    <div class="cards">
+      <div class="card">
+        <img src="/assets/neuropsicologia_2.webp" alt="Adulto siendo evaluado" srcset="">
+        <h3>Neuropsicología</h3>
+        <p>A través de la evaluación neuropsicológica, identificamos tus fortalezas y desafíos cognitivos</p>
+        <a routerLink="./neuropsicologia" rel="noopener noreferrer">
+          Conoce más
+          <span class="material-symbols-outlined">read_more</span>
+        </a>
+      </div>
+      <div class="card">
+        <img src="/assets/card-3.jpg" alt="Bebe siendo evaluado" srcset="">
+        <h3>Estimulación Temprana</h3>
+        <p>En CINERÍ, integramos la ciencia y la calidez humana para impulsar el desarrollo integral de tu hijo.</p>
+        <a routerLink="./estimulacion-temprana" rel="noopener noreferrer">
+          Conoce más
+          <span class="material-symbols-outlined">read_more</span>
+        </a>
+      </div>
+      <div class="card">
+        <img src="/assets/neuropsicologia-service1.png" alt="Adolescente siendo evaluado" srcset="">
+        <h3>Psicoterapia</h3>
+        <p>Un espacio seguro y confidencial para cuidar tu salud mental. Te acompañamos a entender tus emociones, superar desafíos y encontrar tu equilibrio.</p>
+        <a routerLink="./psicoterapia" rel="noopener noreferrer">
+          Conoce más
+          <span class="material-symbols-outlined">read_more</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section id="conocenos">
+    <p>En <strong>CINERI</strong>, creemos en el potencial de cada individuo. Nuestra misión es acompañarte a ti y a tu familia en el camino hacia una vida más plena y saludable, abordando los desafíos desde su raíz con un enfoque científico y profundamente humano.</p>
+    <div class="cards">
+      <div class="card card_1">
+        <div class="overlay2">
+          <h4>Nuestra misión es ofrecerte un espacio seguro, ético y basado en evidencia científica donde tú y tus seres queridos puedan encontrar las herramientas para crecer, sanar y alcanzar su máximo potencial.</h4>
+        </div>
+      </div>
+      <div class="card card_2">
+        <div class="overlay2">
+          <h4>Entendemos que cada mente es única. Por eso, integramos la calidez humana con el rigor científico para crear planes de tratamiento totalmente personalizados.</h4>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section id="filosofia">
+    <header>
+      <h2><span class="t1">Nuestra Filosofía</span><span class="t2">Cuidado Integral Basado en la Ciencia y la Empatía</span></h2>
+    </header>
+    <p>Creemos en un enfoque integral que conecta la salud cerebral, el desarrollo infantil y el bienestar emocional. Nuestros tres pilares de servicio trabajan en conjunto para ofrecerte un diagnóstico preciso y un acompañamiento efectivo en cada etapa de la vida.</p>
+    <ul>
+      <li>
+        <strong>Diagnóstico Preciso</strong>
+        <span>Utilizamos las herramientas más actuales para entender a fondo el origen de las dificultades.</span>
+      </li>
+      <li>
+        <strong>Intervención Personalizada</strong>
+        <span>Diseñamos cada terapia a la medida de las necesidades del individuo o la familia.</span>
+      </li>
+      <li>
+        <strong>Acompañamiento Humano</strong>
+        <span>Tu bienestar es nuestra prioridad. Te acompañamos con empatía, respeto y confidencialidad en cada paso del proceso.</span>
+      </li>
+    </ul>
+  </section>
+
+  <article id="contacto">
+    <div class="big-card">
+      <div class="overlay3">
+        <h2>¿Listo para dar el primer paso hacia tu bienestar?</h2>
+        <p>Si buscas un equipo comprometido, profesional y humano, estás en el lugar correcto. Nos encantaría conocerte y explorar cómo podemos ayudarte a ti o a tu familia.</p>
+        <vw-button icon="calendar_today" variant="primary" class="btn" (click)="openModal()"> Agendar </vw-button>
+      </div>
+    </div>
+  </article>
+</main>
+

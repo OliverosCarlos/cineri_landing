@@ -9,13 +9,11 @@ import { OverlayService } from './services/overlay.service';
 import { AppointmentModal } from './features/appointment-modal/appointment-modal';
 import { NgOptimizedImage } from '@angular/common';
 import { isPlatformBrowser } from '@angular/common';
-import { Header } from "./features/header/header";
-import { RouterOutlet } from "@angular/router";
-import { RouterModule } from '@angular/router';
+import { RouterOutlet, RouterModule } from "@angular/router";
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, Footer, Header, RouterOutlet, RouterModule],
+  imports: [CommonModule, Footer, RouterOutlet, RouterModule],
   templateUrl: './app.html',
   styleUrls: ['./app.scss', './app-mobile.scss']
 })

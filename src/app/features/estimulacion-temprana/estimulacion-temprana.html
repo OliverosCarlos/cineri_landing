@@ -1,1 +1,131 @@
-<p>estimulacion-temprana works!</p>
+<app-header
+  [title]="'Estimulación Temprana para el Desarrollo Óptimo de tu Hijo'"
+  [subtitle]="'Un Espacio Dedicado a tu Bienestar Mental y Desarrollo.'"
+  [backgroundImageUrl]="'/assets/card-4.jpg'"
+  >
+</app-header>
+
+<main>
+
+  <header class="main-header">
+    <h2>Descubre nuestros servicio de Estimulación Temprana en Tepic Nayarit</h2>
+  </header>
+
+  <section id="introduccion" class="section-p-m">
+    <p>
+      Bienvenido a <strong>CINERÍ</strong>, un espacio en Tepic, Nayarit,
+      donde creemos firmemente en el potencial ilimitado de cada niño.
+      Sabemos que los primeros años de vida son fundamentales.
+      Por eso, nuestro programa de Estimulación Temprana está diseñado para brindar a tu hijo las herramientas,
+      el cariño y la guía experta que necesita para explorar el mundo, desarrollar sus habilidades y construir una base sólida para su futuro académico y social.
+    </p>
+    <div class="card">
+      <div class="overlay2">
+        <h4>A través de actividades dirigidas, terapia de juego y un profundo entendimiento del neurodesarrollo, ayudamos a tu hijo a alcanzar sus hitos cognitivos, motores, de lenguaje y sociales, preparándolo para un futuro lleno de éxitos.</h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="paquetes">
+    @if (isMobile()) {
+      <div class="mobile-card">
+        <div class="header"><h2>Estimulación Temprana Base</h2></div>
+        <div class="body">
+          @for (item of items(); track item.id) {
+            @if (item.opts[0]) {
+              <div class="item">
+                <span class="material-symbols-outlined check">check</span>
+                <span>{{ item.title }}</span>
+              </div>
+            } @else {
+              <!-- No mostrar nada si opts[0] es false -->
+            }
+          }
+        </div>
+        <div class="footer"><vw-button icon="calendar_today" variant="secondary" class="btn" (click)="openModal()"> Agendar </vw-button></div>
+      </div>
+      <div class="mobile-card">
+        <div class="header"><h2>Estimulación Temprana Intensiva</h2></div>
+        <div class="body">
+          @for (item of items(); track item.id) {
+            @if (item.opts[1]) {
+              <div class="item">
+                <span class="material-symbols-outlined check">check</span>
+                <span>{{ item.title }}</span>
+              </div>
+            } @else {
+              <!-- No mostrar nada si opts[0] es false -->
+            }
+          }
+        </div>
+        <div class="footer"><vw-button icon="calendar_today" variant="secondary" class="btn" (click)="openModal()"> Agendar </vw-button></div>
+      </div>
+    }@else {
+      <table>
+        <tr>
+          <th class="hp1"></th>
+          <th class="hp2">Estimulación Temprana Base</th>
+          <th class="hp3">Estimulación Temprana Intensiva</th>
+        </tr>
+
+        @for (item of items(); track item.id) {
+          <tr>
+            <td class="title">{{ item.title }}</td>
+            <td><span class="material-symbols-outlined" [ngClass]="item.opts[0]? 'check' : 'uncheck'">{{ item.opts[0] ? 'check' : 'close' }}</span></td>
+            <td><span class="material-symbols-outlined" [ngClass]="item.opts[1]? 'check' : 'uncheck'">{{ item.opts[1] ? 'check' : 'close' }}</span></td>
+          </tr>
+        }
+        <tr>
+          <td></td>
+          <td>
+            <vw-button icon="calendar_today" variant="secondary" class="btn" (click)="openModal()"> Agendar </vw-button>
+          </td>
+          <td>
+            <vw-button icon="calendar_today" variant="secondary" class="btn" (click)="openModal()"> Agendar </vw-button>
+          </td>
+        </tr>
+      </table>
+    }
+  </section>
+
+    <section class="service-details">
+    <div class="service-details__container">
+
+      <!-- Cabecera de la sección -->
+      <div class="service-details__header">
+        <h2 class="service-details__title">
+          Detalles de Nuestros Servicios de Estimulación Temprana
+        </h2>
+        <p class="service-details__subtitle">
+          Cada uno de nuestros paquetes está diseñado para brindarte una atención integral.
+          Conoce en detalle los elementos que componen tu evaluación y seguimiento.
+        </p>
+      </div>
+
+      <!-- Grid de elementos -->
+      <div class="service-details__grid">
+
+        @for (element of items(); track element.id) {
+          <div class="service-card">
+            <div class="service-card__icon-wrapper">
+              <span class="material-symbols-outlined">{{ element.icon }}</span>
+            </div>
+            <div class="service-card__content">
+              <h3 class="service-card__title">{{ element.title }}</h3>
+              <p class="service-card__description">
+                {{ element.description }}
+              </p>
+            </div>
+          </div>
+        } @empty {
+          <!-- Esto se muestra si la señal items está vacía -->
+          <p class="service-details__subtitle">
+            No hay servicios para mostrar en este momento.
+          </p>
+        }
+
+      </div>
+    </div>
+  </section>
+
+</main>

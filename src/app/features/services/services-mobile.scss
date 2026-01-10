@@ -1,0 +1,53 @@
+@media (max-width: 800px) {
+  .section-p-m{
+    flex-direction: column;
+    p{
+      max-width: 100%;
+      font-size: 1.2rem;
+    }
+  }
+
+  .section-big-cards{
+    flex-direction: column;
+    .cards{
+      flex-direction: column;
+      .card{
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  #filosofia{
+    margin: 20px 0px 0px 0px;
+    padding: 10px;
+    ul{
+      flex-direction: column;
+      gap: 20px;
+      padding: 0px;
+      li{
+        padding: 20px;
+      }
+    }
+  }
+
+    article{
+
+    .big-card{
+      .overlay3{
+        padding: 10px;
+        h2{
+          font-size: 1.5rem;
+          max-width: 100%;
+        }
+        p{
+          font-size: 1rem;
+          max-width: 100%;
+          text-align: justify;
+        }
+      }
+    }
+
+  }
+
+}

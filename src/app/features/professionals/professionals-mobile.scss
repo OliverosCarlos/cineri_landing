@@ -1,0 +1,158 @@
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+@media (max-width: 800px) {
+
+  main{
+    padding: 0px;
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .container{
+      margin: 0px;
+      box-shadow: none;
+      border-radius: 0px;
+    }
+
+    #especialista{
+
+      .specialist-card{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .specialist-info{
+          width: 100%;
+          padding: 0px;
+
+          .specialist-name{
+            margin-bottom: 5px;
+            h2{
+              font-size: 1.8rem;
+              margin: 0;
+            }
+            span{
+              margin-left: 20px;
+              font-size: 1.5rem;
+              font-weight: 500;
+              color: #369DA4;
+            }
+          }
+
+          .professional-education-cards{
+            flex-direction: column;
+            align-items: center;
+            justify-content: none;
+            .professional-education-card{
+              width: 80% !important;
+              margin-bottom: 10px;
+            }
+          }
+
+        }
+
+        img{
+          border-radius: 20px;
+          width: 80%;
+          // max-height: 500px;
+          object-fit: cover;
+        }
+
+        .specialist-image{
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+  }
+
+  .service-card{
+    padding: 10px;
+
+    .service-details{
+      padding: 1px 25px 1px 25px;
+    }
+  }
+
+  .section-p-m{
+    flex-direction: column;
+    p{
+      max-width: 100%;
+      font-size: 1.2rem;
+    }
+  }
+
+  .certifications{
+    padding: 10px;
+
+    .card-certifications{
+      padding: 10px;
+      background-color: #ececec88;
+    }
+  }
+
+  .contact-information{
+    border-radius: 0px;
+
+    .contact-information-container{
+      flex-direction: column;
+      gap: 0rem;
+      justify-content: space-evenly;
+    }
+  }
+
+  .mobile-card{
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: $shadow-lg;
+
+    .header{
+      border-radius: 20px 20px 0px 0px;
+      padding-block: 20px;
+      font-size: 1.2rem;
+      text-align: center;
+      h2{
+        color: #fff;
+      }
+    }
+
+    .body{
+      padding: 10px;
+      font-size: 1rem;
+      .item{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .material-symbols-outlined{
+          color: #41BDC6;
+          font-variation-settings:
+          'FILL' 1,
+          'wght' 700,
+          'GRAD' 0,
+          'opsz' 48;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .footer{
+      text-align: center;
+      padding-bottom: 10px;
+    }
+  }
+
+
+  // .mobile-card:nth-of-type(1) .header { background-color: #1D75BD; }
+  // .mobile-card:nth-of-type(2) .header { background-color: #1B6FB4; }
+  // .mobile-card:nth-of-type(3) .header { background-color: #165A92; }
+  .mobile-card:nth-of-type(1) { border: solid 3px #1D75BD; .header { background-color: #1D75BD;} }
+  .mobile-card:nth-of-type(2) { border: solid 3px #1B6FB4; .header { background-color: #1B6FB4;} }
+  .mobile-card:nth-of-type(3) { border: solid 3px #165A92; .header { background-color: #165A92;} }
+
+}

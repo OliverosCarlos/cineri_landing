@@ -79,6 +79,14 @@
       color: #fff;
     }
 
+    a{
+      margin-right: auto;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      span{ font-size: 1.5rem;}
+    }
 
   }
 }

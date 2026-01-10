@@ -1,0 +1,397 @@
+main{
+  background-color: #fdfdfd;
+  // background:
+  //   linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+  //   url('/assets/white-logo.png') no-repeat right 20px bottom 20px;
+  // background-size: 70svh auto;
+  .main-header{
+    background-color: #fdfdfd;
+    text-align: center;
+    padding: 10px 40px;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1F8BB8;
+}
+
+p {
+  color: #165A92;
+}
+
+
+.section-p-m{
+  display: flex;
+  gap: 20px;
+  padding-inline: 20px;
+
+  p{
+    max-width: 40%;
+    font-size: 1.5rem;
+  }
+  .card{
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    position: relative;
+    h4{
+      padding: 20px;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.section-big-cards{
+  display: flex;
+  flex-direction: column;
+  padding-inline: 20px;
+
+  .cards{
+    display: flex;
+    justify-content: space-between;
+
+    .card{
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      img{
+        width: 100%;
+        max-height: 300px;
+        border-radius: 12px;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      }
+      h3{
+        padding-inline: 10px;
+        font-size: 1.5rem;
+      }
+      p{
+        margin: 0px;
+        padding: 0px 10px 10px 10px;
+        font-size: 1.2rem;
+      }
+      a{
+        margin-left: auto;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        span{ font-size: 1.5rem;}
+      }
+    }
+  }
+
+}
+
+
+.section-header{
+  // display: inline-block;
+  h2{
+    background-color: #1A7196;
+    padding: 10px 10px 10px 0px;
+    border-radius: 30px;
+    display: flex;
+    align-items: baseline;
+    width: fit-content;
+    margin: 20px auto;
+  }
+  .t1{
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+  }
+  .t2{
+    background-color: #fdfdfd;
+    border-radius: 20px;
+    padding: 10px 20px;
+    flex-grow: 1;
+    color: #1A7196;
+  }
+}
+
+
+#conocenos{
+  background-color: #fdfdfd;
+  padding-inline: 40px;
+  p{
+    text-align: justify;
+    font-size: 1.5rem;
+    padding-inline: 20px;
+  }
+  .cards{
+    display: flex;
+    gap: 20px;
+    h4{
+      padding: 20px;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    .card_1{
+      background: url('/assets/neuropsicologa.webp') no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .card_2{
+      background: url('/assets/consultorio_3.webp') no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+}
+
+#filosofia{
+  background-color: #e9f0f2;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  p{
+    text-align: justify;
+    padding: 20px;
+    font-size: 1.5rem;
+  }
+  header{
+    h2{
+      background-color: #1A7196;
+      padding: 10px 10px 10px 0px;
+      border-radius: 30px;
+      display: flex;
+      align-items: baseline;
+    }
+    .t1{
+      padding: 10px 20px;
+      border-radius: 20px;
+      color: white;
+    }
+    .t2{
+      background-color: #fdfdfd;
+      border-radius: 20px;
+      padding: 10px 20px;
+      flex-grow: 1;
+      color: #1A7196;
+    }
+  }
+
+  ul{
+    display: flex;
+    gap: 10%;
+    li{
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      background-color: #fdfdfd;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    }
+  }
+}
+
+.main-services{
+  background-color: #fdfdfd;
+  h2{
+    font-size: 2rem;
+    padding: 10px 40px;
+  }
+
+  p{
+    font-size: 1.5rem;
+    padding: 10px 60px;
+    text-align: justify;
+  }
+
+  section{
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+
+    p{
+      padding-inline: 20px;
+    }
+
+    .card{
+      background: url('/assets/neuropsicologia_2.webp') no-repeat;
+      background-size: cover;
+      background-position: center;
+      h3{
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+    }
+
+    img{
+      border-radius: 20px;
+    }
+  }
+}
+
+#introduccion{
+  .card{
+    background: url('/assets/familia-sana.webp') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+#neuropsicologia{
+    .card{
+      background: url('/assets/neuropsicologia_2.webp') no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+}
+
+#estimulacion-temprana{
+    .card{
+      background: url('/assets/card-1.jpg') no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+}
+
+#psicoterapia{
+    .card{
+      background: url('/assets/duelo.webp') no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+}
+
+  // .card {
+  //   margin-block: 30px;
+  //   width: 100%;
+  //   min-height: 300px;
+  //   border-radius: 12px;
+  //   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  //   overflow: hidden;
+  //   cursor: pointer;
+  //   position: relative;
+  //   transition: all 0.5s ease;
+  // }
+
+  /* Overlay */
+  .overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 5%;
+    height: 50%;
+    width: 90%;
+    background: #1f8ab822;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    backdrop-filter: blur(5px);border: solid 1px black;
+  }
+
+  /* Overlay */
+  .overlay2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #e9f0f2b3;
+    background: linear-gradient(180deg,rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.574) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+
+  .secondary-title{
+    background-color: #1B6FB4;
+    padding: 10px 10px 10px 0px;
+    border-radius: 30px;
+    display: flex;
+    align-items: baseline;
+
+    .t1{
+      padding: 10px 20px;
+      border-radius: 20px;
+      color: white;
+    }
+    .t2{
+      background-color: #fdfdfd;
+      border-radius: 20px;
+      padding: 10px 20px;
+      flex-grow: 1;
+      color: #1B6FB4;
+    }
+  }
+
+  article{
+
+    .big-card{
+      width: 100%;
+      position: relative;
+      background: url('/assets/familia.webp') no-repeat;
+      background-size: cover;
+      background-position: center;
+      min-height: 400px;
+
+      /* Overlay */
+      .overlay3{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #e9f0f2b3;
+        background: linear-gradient(180deg,rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.4) 100%);
+        backdrop-filter: blur(3px);
+        color: #07355b;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        box-sizing: border-box;
+        text-align: center;
+        h2{
+          max-width: 70%;
+          font-size: 2.5rem;
+          color: #c1eaed;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        p{
+          font-size: 1.5rem;
+          max-width: 70%;
+          font-weight: bolder;
+          color: #fff;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+      }
+    }
+  }
+
+  .services-items {
+      list-style-type: none;
+      padding: 20px;
+      max-width: 500px;
+    }
+
+    .services-items li {
+      display: flex;
+      align-items: flex-start; /* Alinea al inicio (si el texto ocupa varias líneas) */
+      font-size: 1rem; /* Tamaño de texto legible */
+      align-items: center;
+      color: #165A92;
+    }
+
+    .services-items .material-symbols-outlined {
+      margin-right: 12px; /* Espacio entre el icono y el texto */
+      font-size: 32px; /* Tamaño del icono */
+      color: #369DA4;
+      position: relative;
+      top: 3px; /* Pequeño ajuste vertical para alinear mejor */
+    }

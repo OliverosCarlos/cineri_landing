@@ -1,0 +1,109 @@
+main{
+  background-color: #fdfdfd;
+  // background:
+  //   linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+  //   url('/assets/white-logo.png') no-repeat right 20px bottom 20px;
+  // background-size: 70svh auto;
+  .main-header{
+    background-color: #fdfdfd;
+    text-align: center;
+    padding: 10px 40px;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1F8BB8;
+}
+
+p {
+  color: #165A92;
+}
+
+#introduccion{
+  .card{
+    background: url('/assets/familia-sana.webp') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.section-p-m{
+  display: flex;
+  gap: 20px;
+  padding-inline: 20px;
+
+  p{
+    max-width: 40%;
+    font-size: 1.5rem;
+  }
+  .card{
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    position: relative;
+    h4{
+      padding: 20px;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
+  .overlay2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #e9f0f2b3;
+    background: linear-gradient(180deg,rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+#paquetes{
+  margin-block: 20px;
+
+  table{
+    margin-inline: auto;
+    border-radius: 20px;
+    border: solid 1px rgb(233, 233, 233);
+    padding: 0px;
+    th{
+      padding: 40px;
+      color: #fff;
+    }
+    td{
+      padding: 10px 40px;
+      text-align: center;
+      .check{
+        color: #41BDC6;
+      }
+      .uncheck{
+        color: red;
+      }
+    }
+  }
+
+  .hp1{
+    background-color: rgb(233, 233, 233);
+    border-radius: 20px 0px 0px 0px;
+  }
+  .hp2{
+    background-color: #27AAE2;
+  }
+  .hp3{
+    background-color: #25A4DA;
+  }
+  .hp4{
+    background-color: #1F8BB8;
+    border-radius: 0px 20px 0px 0px;
+  }
+}
