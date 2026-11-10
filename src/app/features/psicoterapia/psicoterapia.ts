@@ -20,7 +20,7 @@ export class Psicoterapia {
     this.seoService.updateMetaTags(
       'Psicoterapia y Terapia Psicológica en Tepic | CINERI',
       'Ofrecemos psicoterapia para niños, adolescentes y adultos en Tepic. Terapia para ansiedad, depresión, problemas de pareja y más. Agenda una consulta.',
-      'https://cineri-tepic.web.app/assets/share-about.png'
+      'https://cineri.vaweei.com/assets/share-about.png'
     );
   }
 }

@@ -90,7 +90,7 @@ export class Neuropsicologia implements OnInit{
     this.seoService.updateMetaTags(
       'Evaluación Neuropsicológica en Tepic | Diagnóstico | CINERI',
       'Realizamos evaluación y diagnóstico neuropsicológico en Tepic Nayarit. Expertos en TDAH, trastornos del aprendizaje, autismo y demencias.',
-      'https://cineri-tepic.web.app/assets/share-about.png'
+      'https://cineri.vaweei.com/assets/share-about.png'
     );
   }
 

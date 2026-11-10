@@ -1,37 +1,70 @@
-import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Inject, Injectable } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
-import { isPlatformBrowser } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SeoService {
+  private readonly baseUrl = 'https://cineri.vaweei.com';
 
   constructor(
-    private title: Title, private meta: Meta,
-    @Inject(PLATFORM_ID) private platformId: object
+    private title: Title,
+    private meta: Meta,
+    private router: Router,
+    @Inject(DOCUMENT) private document: Document,
   ) { }
 
   updateMetaTags(title: string, description: string, imageUrl: string) {
-    // 1. Establece el título de la página
-    this.title.setTitle(title);
+    const pageUrl = this.buildAbsoluteUrl(this.router.url || '/');
+    const absoluteImageUrl = this.toAbsoluteUrl(imageUrl);
 
-    // 2. Actualiza los meta tags usando `updateTag` para evitar duplicados
     this.meta.updateTag({ name: 'description', content: description });
+    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
-    // Open Graph Tags (para Facebook, LinkedIn, etc.)
     this.meta.updateTag({ property: 'og:title', content: title });
     this.meta.updateTag({ property: 'og:description', content: description });
-    this.meta.updateTag({ property: 'og:image', content: imageUrl });
-    if (isPlatformBrowser(this.platformId)) {
-      this.meta.updateTag({ property: 'og:url', content: window.location.href }); // URL de la página actual
-    }
+    this.meta.updateTag({ property: 'og:image', content: absoluteImageUrl });
+    this.meta.updateTag({ property: 'og:url', content: pageUrl });
     this.meta.updateTag({ property: 'og:type', content: 'website' });
+    this.meta.updateTag({ property: 'og:site_name', content: 'CINERI Tepic' });
 
-    // Twitter Cards
     this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
     this.meta.updateTag({ name: 'twitter:title', content: title });
     this.meta.updateTag({ name: 'twitter:description', content: description });
-    this.meta.updateTag({ name: 'twitter:image', content: imageUrl });
+    this.meta.updateTag({ name: 'twitter:image', content: absoluteImageUrl });
+    this.meta.updateTag({ name: 'twitter:url', content: pageUrl });
+
+    this.updateCanonical(pageUrl);
+    this.title.setTitle(title);
+  }
+
+  private buildAbsoluteUrl(path: string): string {
+    if (path.startsWith('http://') || path.startsWith('https://')) {
+      return path;
+    }
+
+    const cleanPath = path.startsWith('/') ? path : `/${path}`;
+    if (cleanPath === '/') {
+      return this.baseUrl;
+    }
+    return `${this.baseUrl}${cleanPath}`;
+  }
+
+  private toAbsoluteUrl(url: string): string {
+    return url.startsWith('http://') || url.startsWith('https://')
+      ? url
+      : this.buildAbsoluteUrl(url);
+  }
+
+  private updateCanonical(url: string): void {
+    let canonical = this.document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = this.document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      this.document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', url);
   }
 }

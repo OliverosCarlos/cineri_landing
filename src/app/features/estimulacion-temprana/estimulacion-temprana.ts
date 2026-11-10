@@ -90,7 +90,7 @@ export class EstimulacionTemprana implements OnInit{
     this.seoService.updateMetaTags(
       'Estimulación Temprana en Tepic | Desarrollo Infantil | CINERI',
       'Impulsa el desarrollo de tu bebé con nuestro programa de estimulación temprana en Tepic. Expertos en desarrollo psicomotor, cognitivo y de lenguaje.',
-      'https://cineri-tepic.web.app/assets/share-about.png'
+      'https://cineri.vaweei.com/assets/share-about.png'
     );
   }
 

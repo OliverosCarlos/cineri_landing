@@ -98,7 +98,7 @@ export class Professionals implements OnInit, AfterViewInit {
     this.seoService.updateMetaTags(
       'Neuropsicóloga en Tepic Nayarit',
       'Atención especializada en neuropsicología para niños y adultos en Tepic, Nayarit. Evaluación, diagnóstico e intervención en trastornos del neurodesarrollo, aprendizaje, y más.',
-      'https://cineri-tepic.web.app/assets/share-about-professional1.jpg'
+      'https://cineri.vaweei.com/assets/share-about-professional1.jpg'
     );
   }
 

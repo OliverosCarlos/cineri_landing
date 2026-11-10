@@ -34,7 +34,7 @@ export class Nosotros implements OnInit{
     this.seoService.updateMetaTags(
       'Sobre Nosotros | Conoce al Equipo de CINERI en Tepic Nayarit',
       'Conoce nuestra misión, valores y al equipo de especialistas de CINERI. Descubre por qué somos tu mejor opción en salud mental en Tepic Nayarit.',
-      'https://cineri-tepic.web.app/assets/share-about.png'
+      'https://cineri.vaweei.com/assets/share-about.png'
     );
   }
 

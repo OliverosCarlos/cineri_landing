@@ -57,3 +57,15 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## SEO / Indexación en Google
+
+- El sitemap está en [public/sitemap.xml](./public/sitemap.xml) y se publica en `/sitemap.xml`.
+- El archivo de rastreo está en [public/robots.txt](./public/robots.txt) y referencia el sitemap.
+- Las etiquetas SEO dinámicas (title, description, canonical, Open Graph, Twitter) se gestionan en [src/app/services/seo.service.ts](./src/app/services/seo.service.ts).
+
+Cuando despliegues cambios:
+
+1. Verifica que `https://cineri.vaweei.com/robots.txt` y `https://cineri.vaweei.com/sitemap.xml` respondan `200`.
+2. En Google Search Console, envía el sitemap (`/sitemap.xml`).
+3. Usa "Inspección de URL" para solicitar indexación de URLs clave.

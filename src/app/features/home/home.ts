@@ -22,7 +22,7 @@ export class Home implements OnInit{
     this.seoService.updateMetaTags(
       'CINERI | Clínica de Neuropsicología, Estimulación Temprana y Psicoterapia en Tepic Nayarit',
       'En CINERI Tepic somos expertos en neuropsicología, estimulación temprana y psicoterapia. Ayudamos a niños y adultos. ¡Agenda tu cita hoy!',
-      'https://cineri-tepic.web.app/assets/social-share-template1_1.png'
+      'https://cineri.vaweei.com/assets/social-share-template1_1.png'
     );
   }
 }

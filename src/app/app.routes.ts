@@ -11,6 +11,8 @@ import { Blog } from './features/blog/blog';
 import { Services } from './features/services/services';
 import { Contacto } from './features/contacto/contacto';
 import { Professionals } from './features/professionals/professionals';
+import { PoliticaPrivacidad } from './features/politica-privacidad';
+import { TerminosCondiciones } from './features/terminos-condiciones';
 //import { NotFound } from './features/not-foun'; // Componente recomendado para 404
 
 export const routes: Routes = [
@@ -30,6 +32,9 @@ export const routes: Routes = [
     path: 'contacto',
     component: Contacto,
   },
+  { path: 'politica-de-privacidad', component: PoliticaPrivacidad },
+  { path: 'terminos-y-condiciones', component: TerminosCondiciones },
+  { path: 'privacidad', redirectTo: 'politica-de-privacidad', pathMatch: 'full' },
   { path: 'nosotros', component: Nosotros },
   { path: 'nosotros/profesionales/magali-madera', component: Professionals },
   // Ruta "catch-all" para manejar páginas no encontradas (404). Siempre debe ir al final.

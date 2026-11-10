@@ -23,7 +23,7 @@ export class Services implements OnInit{
     this.seoService.updateMetaTags(
       'Servicios de Neuropsicología, Estimulación Temprana y Psicoterapia | CINERI Tepic',
       'Descubre nuestros servicios: Evaluación Neuropsicológica, Estimulación Temprana y Psicoterapia para niños, adolescentes y adultos en Tepic Nayarit.',
-      'https://cineri-tepic.web.app/assets/share-about.png'
+      'https://cineri.vaweei.com/assets/share-about.png'
     );
   }
 

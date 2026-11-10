@@ -1,5 +1,6 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-contacto',
@@ -7,11 +8,20 @@ import { Component, Inject, PLATFORM_ID } from '@angular/core';
   templateUrl: './contacto.html',
   styleUrl: './contacto.scss'
 })
-export class Contacto {
+export class Contacto implements OnInit {
 
   constructor(
-    @Inject(PLATFORM_ID) private platformId: object
+    @Inject(PLATFORM_ID) private platformId: object,
+    private seoService: SeoService,
   ){}
+
+  ngOnInit(): void {
+    this.seoService.updateMetaTags(
+      'Contacto | Agenda tu cita en CINERI Tepic',
+      'Contáctanos para agendar tu cita de neuropsicología, estimulación temprana o psicoterapia en Tepic, Nayarit.',
+      'https://cineri.vaweei.com/assets/share-about.png',
+    );
+  }
 
   sendWhatsApp() {
     const numero = '523111212549'; //
